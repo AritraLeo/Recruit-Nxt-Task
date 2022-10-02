@@ -1,0 +1,30 @@
+Perform the following task using the Codeigniter Framework.
+
+1.    Create a simple login functionality with 3 users with roles (Admin, Operator, Manager).
+2.    Create a State Master List with a field "Name",”State Image(input type file)” for create, update & delete functionality.
+3.    Create a City Master with "Name" and "State" selection for create, update & delete functionality.
+4.    Users with Admin role_id should have access to "Add", "Edit", "Delete" permissions in State & City Master.
+5.    Users with Manager role_id should have access to "Add", "Edit" permissions in State & City Master.
+6.    Users with Operator role_id should have access to "Add" permissions in State & City Master.
+ 
+Note:
+1.    Designing and UI is not important, but try to use bootstrap.
+2.    Selection of user roles is not required at the login page. It should be auto-detected.
+3.    You can add the users and roles directly from the database by entering the data in the user & role table.
+4.    Add properly client side validation and server side validation.
+5. Send a 2-3 demo video along with the assignment code.
+
+
+Taken (Values for Roles):
+Admin - 3
+Manager - 2
+Operator - 1 
+
+
+
+<?php
+			if (isset($_SESSION['StateEdit']) && $_SESSION['StateEdit'] == true) {
+				echo 'editState';
+			} else
+				echo 'addState';
+			?>
